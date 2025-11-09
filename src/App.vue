@@ -377,6 +377,38 @@ const navigateTo = (page) => {
           </p>
           <div class="title-decoration"></div>
         </div>
+
+        <!-- AI IDE Overview Section -->
+        <section class="ai-overview-section">
+          <div class="overview-container">
+            <div class="overview-image-wrapper">
+              <img src="/images/ai-ide-overview.png" alt="AI IDE Overview" class="overview-image">
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <h3 class="overlay-title">AI-Powered Development Ecosystem</h3>
+                  <p class="overlay-description">
+                    Experience the future of coding where artificial intelligence enhances creativity, 
+                    accelerates development, and transforms ideas into reality.
+                  </p>
+                  <div class="feature-highlights">
+                    <div class="feature-item">
+                      <span class="feature-icon">🧠</span>
+                      <span class="feature-text">Intelligent Code Generation</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="feature-icon">⚡</span>
+                      <span class="feature-text">Real-time AI Assistance</span>
+                    </div>
+                    <div class="feature-item">
+                      <span class="feature-icon">🚀</span>
+                      <span class="feature-text">Accelerated Development</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section class="advantages-content">
@@ -1299,6 +1331,111 @@ const navigateTo = (page) => {
   position: relative;
   overflow: hidden;
 }
+/* AI Overview Section Styles */
+.ai-overview-section {
+  margin: 60px 0;
+  padding: 0 20px;
+}
+
+.overview-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.overview-image-wrapper {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  /* background: rgba(255, 255, 255, 0.05); */
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.3), rgba(49, 46, 129, 0.2));
+  backdrop-filter: blur(20px);
+  /* border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.overview-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.5) contrast(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(30, 27, 75, 0.7) 0%,
+    rgba(49, 46, 129, 0.5) 50%,
+    rgba(30, 64, 175, 0.7) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+}
+
+.overlay-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #42a5f5, #1e88e5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.overlay-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(66, 165, 245, 0.2);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+}
+
+.feature-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+}
 
 .tutorial-hero {
   position: relative;
@@ -1559,8 +1696,10 @@ const navigateTo = (page) => {
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 25px;
-  padding: 50px 40px;
-  max-width: 600px;
+  /* padding: 50px 40px; */
+  /* max-width: 600px; */
+  max-width: calc(100vw - 40px);
+  padding: 30px 20px;
   margin: 0 auto;
 }
 
@@ -1890,5 +2029,37 @@ const navigateTo = (page) => {
     font-size: 1.5rem;
   }
 }
+
+/* 移动端：AI概览部分响应式样式 */
+  .ai-overview-section {
+    margin: 30px 0;
+    padding: 0 10px;
+  }
+  
+  .image-overlay {
+    padding: 20px;
+  }
+  
+  .overlay-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  
+  .overlay-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .feature-highlights {
+    gap: 15px;
+  }
+  
+  .feature-item {
+    padding: 10px 15px;
+  }
+  
+  .feature-text {
+    font-size: 0.8rem;
+  }
 
 </style>
